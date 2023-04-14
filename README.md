@@ -24,10 +24,6 @@ Designing an intuitive navigation system so that the users can easily find what 
 
 A command line simulation.
 
-## What's next for Portfolio-CLI
-
-Maybe a more scalable cloud based version? One that pulls data from a web server? One in which colours can be modified from the cli? A lot can be done which hopefully I am looking forward to do in near future.
-
-##Try it out 
+## Try it out 
 
 [Click here](https://verma-divyanshu-git.github.io/terminalresume/)
