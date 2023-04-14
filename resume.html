@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" name="divyanshu's terminal-style portfolio website" content="width=device-width">
+<title>my portfolio </title>
+<style>
+
+body {
+  background-color: black;
+  font-family: monospace;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#cursor {
+  display: inline-block;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  font-size: 12px;
+}
+
+#terminal-wrap {
+  width: 95%;
+  background-color: black;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+  border: 1px solid white;
+  overflow: hidden;
+}
+
+#terminal {
+  top: 5px;
+  bottom: 5px;
+  width: 100%;
+  background-color: black;
+  font-size: 12px;
+  height: 370px;
+}
+
+img {
+  height: 12px;
+  width: auto;
+}
+</style>
+<!-- html2pdf CDN link -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+			integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+</head>
+<body>
+    <h1 style="text-align: center;"><a href="https://verma-divyanshu-git.github.io/terminalresume/" target="_blank">view on webpage for an interactive terminal!</a></h1>
+    <div id="terminal-wrap">
+  <div style="font-size: 0;">
+<span id="terminal">
+        <div id="date"></div>
+        </span>
+          </div>
+</div>
+<!-- jsPDF library 
+<script src="js/jsPDF/dist/jspdf.umd.js"></script>
+-->
+<script src="./scripts/files.js"></script>
+<script>
+
+    // runs after github api call finishes
+    function finishedAPICall()
+    {
+      const dateS = new Date();
+      document.getElementById("date").innerHTML = "<font color='grey'>" + dateS + "</font>";
+      document.getElementById("terminal").innerHTML += 
+        
+        `<b><font color="lime">divyanshu</font>:~/divyanshu $</b> whois divyanshu${whoisdivyanshu}
+        <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat contact<br>${fileStructure["divyanshu"]["contact"]}
+        <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat education<br>${fileStructure["divyanshu"]["education"]}
+        <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat por<br>${fileStructure["divyanshu"]["por"]}
+        <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat certifications<br>${fileStructure["divyanshu"]["certifications"]}
+        <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat achievements<br>${fileStructure["divyanshu"]["achievements"]}
+        <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat references<br>${fileStructure["divyanshu"]["references"]}
+        <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat skills<br>${fileStructure["divyanshu"]["skills"]}
+        <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cd projects/<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat blankify <br>
+        ${fileStructure["divyanshu"]["projects"]["blankify"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat tunify <br>
+        ${fileStructure["divyanshu"]["projects"]["tunify"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat hostel-management <br>
+        ${fileStructure["divyanshu"]["projects"]["hostel-management"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat CrimeOrNot <br>
+        ${fileStructure["divyanshu"]["projects"]["CrimeOrNot"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat Covid_Mask_Detector <br>
+        ${fileStructure["divyanshu"]["projects"]["Covid_Mask_Detector"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat terminalresume <br>
+        ${fileStructure["divyanshu"]["projects"]["terminalresume"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> <font id="cursor" style="background-color: white;">&nbsp;</font>`;
+        
+        downloadPDF();
+
+      
+      /*
+      window.jsPDF = window.jspdf.jsPDF;
+      var doc = new jsPDF();
+      doc.html(document.body, {
+      callback: function(doc) {
+        // Save the PDF
+        doc.save('test-document.pdf');
+      },
+      x: 15,
+      y: 15,
+      //width: 170, //target width in the PDF document
+      //windowWidth: 650 //window width in CSS pixels
+});
+*/
+    }
+    
+    
+    async function downloadPDF()
+    {
+      await html2pdf().set({
+      pagebreak: { mode: 'avoid-all' }
+      });
+      await html2pdf().from(document.body).save();
+      await window.close();
+    }
+    
+</script>
+</body>
+</html>

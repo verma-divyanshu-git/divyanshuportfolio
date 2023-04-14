@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta charset="UTF-8" name="divyanshu's terminal-style portfolio website" content="width=device-width">
+<title>my portfolio</title>
+<style>
+
+html, body
+{
+  height: 100%;
+}
+
+body 
+{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  overflow: hidden;
+  justify-content: center;
+}
+
+
+body::-webkit-scrollbar
+{
+    display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#cursor {
+  display: inline-block;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 10px;
+  border-color: white;
+}
+
+#terminal-wrap {
+  width: 50%;
+  height: 56.25%;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+  border: 1px solid white;
+  overflow: hidden;
+}
+
+.center
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#terminal {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  width: 99.5%;
+  overflow-y: scroll;
+  word-break: break-all;
+  scrollbar-width: none;
+}
+
+#blackGreen
+{
+  background-image: linear-gradient(to bottom left, black 20%, lime 150%);
+}
+
+#whitePink
+{
+  background-image: linear-gradient(to top right, #fde4f2, #fde4f2, #eea1cd, #eea1cd);
+}
+
+#blue
+{
+  background-image: linear-gradient(to top right, #729fcf 0%,  #153649 100%);
+}
+
+#blueScreen
+{
+  background-image: linear-gradient(to top right, #ffff4e -100%, #0000a4 90%);
+}
+
+.theme
+{
+  left: -5px;
+  bottom: -5px;
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  transition: 0.5s;
+
+}
+
+.theme_outline:hover
+{
+    transform: scale(1.6);
+}
+
+
+.theme_outline:hover > .theme
+{
+  transform: rotate(90deg) scale(0.625);
+}
+
+.theme_outline
+{
+  visibility: hidden;
+  left: 0px;
+  z-index: -1;
+  top: 23%;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid white;
+  transition: 0.5s;
+  display: block;
+}
+
+#themeWrapper
+{
+  position: fixed;
+  left: 30px;
+  bottom: 20px;
+  height: 80px;
+  display: block;
+}
+
+#themeWrapper:hover
+{
+  width: 350px;
+}
+
+#themeWrapper:hover .theme_outline
+{
+  visibility: visible;
+}
+
+#themeWrapper:hover .one
+{
+  left: 0px ; 
+}
+
+#themeWrapper:hover .two
+{
+  left: 70px;  
+}
+
+#themeWrapper:hover .three
+{
+  left: 140px;
+}
+
+#themeWrapper:hover .four
+{
+  left: 210px;
+}
+
+#themeWrapper:hover .five
+{
+  left: 280px;
+}
+
+.one
+{
+  visibility: visible;
+  z-index: 0;
+  transform: scale(1.05);
+}
+
+/*
+#breathing-wrapper
+{
+  text-align: center;
+  position: absolute;
+  top: 10%;
+}
+
+#breathing-text {
+  font-size: 20px;
+  line-height: 40px;
+  color: DodgerBlue;
+  transition: font-size 2s ease-in-out;
+  visibility: hidden;
+  margin: 0px;
+}
+
+#iKnowWhatIAmDoing
+{
+  visibility: hidden;
+}
+*/
+
+#home-screen
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  justify-content: space-between;
+  transition: opacity 1s;
+}
+
+.purple-grad
+{
+  background-image: linear-gradient(to top, #42378F, #F53844);
+}
+
+.grad-text
+{
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button-wrapper button
+{
+  background: none;
+  border: none;
+}
+
+#show-me
+{
+  background-image: linear-gradient(to top, green, lightGreen);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0px;
+}
+
+#i-got-this
+{
+  background: linear-gradient(to top, rgb(162, 2, 63) 11.2%, rgb(231, 62, 68) 53.6%, rgb(255, 129, 79) 91.1%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0px;
+}
+
+.button-line
+{
+  width: 0px;
+  height: 2px;
+  transition: 0.75s ease-out;
+}
+
+#green-line-grad
+{
+  background-image: linear-gradient(45deg, green 75%, lightGreen);
+}
+
+#red-line-grad
+{
+  background: linear-gradient(45deg, rgb(162, 2, 63) 11.2%, rgb(231, 62, 68) 53.6%, rgb(255, 129, 79) 91.1%);
+}
+
+.button-wrapper
+{
+  margin: 50px;
+}
+
+.button-wrapper:hover .button-line
+{
+  width: 100%;
+}
+
+#buttons
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: sticky;
+  transform: translate(0, 500%);
+  transition: 2s;
+}
+
+#not-welcome
+{
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#title-wrapper
+{
+  width: 400px;
+}
+
+.title-cursor-wrapper
+{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+#subtitle-cursor
+{
+  visibility: hidden;
+}
+
+#help-text
+{
+  text-align: center;
+  width: 50%;
+  transition: opacity 2s, top 2s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#back-button
+{
+  --scale-num: 1;
+  --border-rad: 50%;
+  position: absolute;
+  background-color: dodgerBlue;
+  border: none;
+  border-radius: var(--border-rad);
+  height: 40px;
+  width: 40px;
+  right: 30px;
+  bottom: 20px;
+  font-size: 30px;
+  transition: transform 0.5s, width 2s, border-radius 0.5s;
+  transform: scale(var(--scale-num));
+}
+
+#back-button:hover
+{
+  transform: scale(1.3);
+  border-radius: 25%;
+}
+
+#download-button
+{
+  background: none;
+  color: white;
+  opacity: 1;
+  visibility: hidden;
+  transition: opacity 1s
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.tree-button
+{
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0px;
+  cursor: pointer;
+}
+
+</style>
+<span id="theme">
+  <link rel="stylesheet" href="styles/grassTheme.css"/>
+  <link rel="stylesheet" href="styles/blueScreenTheme.css"/>
+  <link rel="stylesheet" href="styles/blueTheme.css"/>
+  <link rel="stylesheet" href="styles/pinkTheme.css"/>
+  <link rel="stylesheet" href="styles/blackTheme.css"/>
+</span>
+</head>
+  <body>
+    <span id="not-welcome">
+    <!--
+    <span id="breathing-wrapper">
+      <p id="breathing-text">click inside the box below to start!</p>
+      <button type="button" id="iKnowWhatIAmDoing" style="font-size: 12px;" 
+      onclick="breathingText.style.visibility = 'hidden';
+              imGood.style.visibility = 'hidden'; normalInput();">
+      i know what i'm doing!</button>
+    </span>
+    -->
+    <div class="center" id="terminal-wrap">
+      
+        <span id="terminal" style="font-size: 12px;">
+          <div id="date" style="font-size: 12px;"></div>
+          <b><font class="userColor">divyanshu</font>:<font class="dirColor">~/divyanshu</font> $</b>
+          <font id="cursor">&nbsp;</font>
+        </span>
+
+    </div>
+    <span id="themeWrapper">
+    <span class="theme_outline five" id="fifth"><span class="theme" style="background-color: #14773d"></span></span>
+    <span class="theme_outline four" id="fourth"><span class="theme" id="blueScreen"></span></span>
+    <span class="theme_outline three" id="third"><span class="theme" id="blue"></span></span>
+    <span class="theme_outline two" id="second"><span class="theme" id="whitePink"></span></span>
+    <span class="theme_outline one" id="first"><span class="theme" id="blackGreen"></span></span>
+    </span>
+    <button id="back-button" onclick="backButtonPress();">←</button>
+    </span>
+    <span id="home-screen">
+      <span id="title-wrapper">
+        <span class="title-cursor-wrapper">
+          <h1 class="purple-grad grad-text" id="title"></h1><h1 class="purple-grad" id="title-cursor">&nbsp;</h1>
+        </span>
+        <span class="title-cursor-wrapper">
+        <h2 class="purple-grad grad-text"><span id="subtitle"></span><span class="purple-grad" id="subtitle-cursor">&nbsp;</span></h2>
+        </span>
+      </span>
+      <span id="buttons">
+        <span class="button-wrapper">
+          <button id="show-me" onclick="revealTerminal(needHelp = true);"><h1 style="margin: 2px">show me around</h1>
+          <div class="button-line" id="green-line-grad"></div></button>
+        </span>
+        <span class="button-wrapper">
+          <button id="i-got-this" onclick="revealTerminal(false, `great, type 'help' to see a list of available commands`);"><h1 style="margin: 2px">i can navigate a terminal</h1>
+          <div class="button-line" id="red-line-grad"></div></button>
+        </span>
+      </span>
+      <button id = "download-button" onclick="download();">
+        <h4>or, just click me to download the resume directly</h4></button>
+    </span>
+    <h1 class="center" id="help-text"></h1>
+    <!-- jsPDF library -->
+    <script src="js/jsPDF/dist/jspdf.umd.js"></script>
+    <script src="./scripts/style.js"></script>
+    <script src="./scripts/files.js"></script>
+    <script src="./scripts/terminal.js"></script>
+  </body>
+</html>
