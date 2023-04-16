@@ -94,7 +94,7 @@ const commands = [
 ['projects', 'prints some of my favorite projects'],
 ['resume', 'prints resume to terminal'],
 ['tree [dir]', 'prints tree of directories recursively starting from given dir location'],
-['whois divyanshu', 'prints out info on divyanshu']
+['whois divyanshu', 'prints out my info']
 ];
 
 const cmnd = []; 
