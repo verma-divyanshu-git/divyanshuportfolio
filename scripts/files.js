@@ -41,9 +41,9 @@ const fileStructure =
     + 'Organizing Committee : Worked in the OC of the event "Silent Disco" (Les Amis), E-Summit\'22 (EIC) and PECFEST-Creative Committee.<br>',
       
       references: '<br><br><b>Professional References:</b><br>'
-    + 'Dr. Sahaj Saxena<br>'
-    + 'Assistant Professor, TIET<br>'
-    + '<a href="mailto:sahaj.saxena@gmail.com"><i class="fa fa-envelope"></i> sahaj.saxena@gmail.com</a><br>',
+    + 'name<br>'
+    + 'what, clg<br>'
+    + '<a href="mailto: abc "><i class="fa fa-envelope"></i> abc@gmail.com</a><br>',
   },
     test :
     {
