@@ -12,7 +12,7 @@ It's a portfolio so it showcases some of my skills and projects but since it's s
 
 ## How I built it
 
-HTML, CSS and Javascript. Nothing too complicated.
+HTML, CSS and Javascript. Hosted my portfolio website using Firebase Hosting.
 
 ## Challenges I ran into
 
