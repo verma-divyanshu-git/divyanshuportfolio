@@ -44,4 +44,4 @@ whois divyanshu | Prints out my info.
 
 ## Try it out 
 
-[Click here](https://verma-divyanshu-git.github.io/terminalresume/)
+[Click here](https://divyanshuverma-portfolio.web.app/)
