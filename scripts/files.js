@@ -12,33 +12,40 @@ const fileStructure =
                 + '<br>XII (91.8 %)<br>Graduated 2021 <br>'
                 + '<b class="dirColor"><a target="_blank" href="https://goo.gl/maps/1perezkmPyWQEP568">DAV Public School, Patiala</a></b>'
                 + '<br>X (91.82 %)<br>Graduated 2019<br>',
-      por: 'PEC-ACM CSS Student Chapter : Member <br>' 
-                + 'Asset Management Club (AMC-PEC) : Event Manager <br>' 
-                + 'SAASC (Speaker’s Association and Study Circle) : Member <br>' 
-                + 'Entrepreneurship and Incubation Cell (EIC) : IB Member <br>'
-                + 'Les Amis : Permanent Member <br>'
-                + 'Google Developer Student Clubs (GDSC): Member',
-      certifications: '<a href="https://graduation.udacity.com/confirm/WHGUKMTS">AWS Machine Learning Foundations: Udacity</a><br>' 
-                + '<a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_yLFupGR3PppGnQiPk_1660256281637_completion_certificate.pdf">Virtual Experience Program Participant: Goldman Sachs</a><br>' 
-                + '<a href="https://googlecloud.qwiklabs.com/public_profiles/a5d24d38-4244-4b50-9aa9-31ab7763ea2e">30 Days of Google Cloud: Hands on practice on Google Cloud Platform</a><br>' 
-                + '<a href="https://www.coursera.org/account/accomplishments/certificate/Q85AWHNFCGPT">Stock Valuation with Comparable Companies Analysis: Coursera</a><br>',
+
+      skills: '-  Interpersonal Skills: Fast Learner, Problem Solving, Analytical Thinking, Active Listener, Teamwork, <br> Growth Mindset, Code Analysis and Development, Onsite & Digital Marketing <br> '
+                + '- Programing Languages: C++, JavaScript, Python, SQL, HTML, CSS, Unix Shell, Assembly <br>'
+                + '-  Mathematics: Linear Algebra (Basics), Discrete Structures, Probability and Statistics, Calculus and Ordinary Differential Equations <br>'
+                + '- CS subjects: Operating System, Computer Network, DBMS, OOPS, DSA <br>'
+                + '- Tools: Git, Linux, Bash, VS Code, LATEX, Chrome Dev Tools <br>'
+                + '- Libraries/Frameworks: Firebase, C++ STL, OpenCV, Bootstrap <br>',
+
       projects: 
       {
         // user projects
-      },
-      skills: '-  Interpersonal Skills: Fast Learner, Problem Solving, Analytical Thinking, Active Listener, Teamwork, <br> Growth Mindset, Code Analysis and Development, Onsite & Digital Marketing <br> '
-              + '- Programing Languages: C++, JavaScript, Python, SQL, HTML, CSS, Unix Shell, Assembly <br>'
-              + '-  Mathematics: Linear Algebra (Basics), Discrete Structures, Probability and Statistics, Calculus and Ordinary Differential Equations <br>'
-              + '- CS subjects: Operating System, Computer Network, DBMS, OOPS, DSA <br>'
-              + '- Tools: Git, Linux, Bash, VS Code, LATEX, Chrome Dev Tools <br>'
-              + '- Libraries/Frameworks: Firebase, C++ STL, OpenCV, Bootstrap <br>',
-    
+      },                
+
       achievements: 'JEE Mains : Ranked 8906 (AIR) in JEE Mains, which is given by a pool of 1M+ candidates across the country.<br>'
     + 'BITSAT : Scored 318 in BITSAT 2021.<br>'
     + 'JEE Adv : Qualified JEE Advance, one of the most prestigious and toughest exams of the country.<br>'
     + 'HackerRank : 4 star C++ Badge on HackerRank, Silver level, earned 170 points.<br>'
     + 'Pre-RMO : Qualified Pre-RMO, first stage of the International Mathematics Olympiad which covers pre-college math topics, especially algebra, number theory, combinatorics, and geometry.<br>'
     + 'Organizing Committee : Worked in the OC of the event "Silent Disco" (Les Amis), E-Summit\'22 (EIC) and PECFEST-Creative Committee.<br>',
+
+    certifications: '<a href="https://graduation.udacity.com/confirm/WHGUKMTS">AWS Machine Learning Foundations: Udacity</a><br>' 
+    + '<a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_yLFupGR3PppGnQiPk_1660256281637_completion_certificate.pdf">Virtual Experience Program Participant: Goldman Sachs</a><br>' 
+    + '<a href="https://googlecloud.qwiklabs.com/public_profiles/a5d24d38-4244-4b50-9aa9-31ab7763ea2e">30 Days of Google Cloud: Hands on practice on Google Cloud Platform</a><br>' 
+    + '<a href="https://www.coursera.org/account/accomplishments/certificate/Q85AWHNFCGPT">Stock Valuation with Comparable Companies Analysis: Coursera</a><br>',
+
+    
+    por: 'PEC-ACM CSS Student Chapter : Member <br>' 
+                + 'Asset Management Club (AMC-PEC) : Event Manager <br>' 
+                + 'SAASC (Speaker’s Association and Study Circle) : Member <br>' 
+                + 'Entrepreneurship and Incubation Cell (EIC) : IB Member <br>'
+                + 'Les Amis : Permanent Member <br>'
+                + 'Google Developer Student Clubs (GDSC): Member',
+      
+      
       
       references: '<br><br><b>Professional References:</b><br>'
     + '<a href="https://pec.ac.in/cse/faculty/sanjeev-sofat"><b>Dr. Sanjeev Sofat</b></a><br>'
