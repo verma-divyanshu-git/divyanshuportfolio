@@ -16,7 +16,7 @@ HTML, CSS and Javascript. Nothing too complicated.
 
 ## Challenges I ran into
 
-Creating a terminal-style interface that is both visually appealing and easy to use was challenging, but fun nevertheless. 
+Creating a terminal-style interface that is both visually appealing and easy to use was challenging, but fun nevertheless.
 
 Designing an intuitive navigation system so that the users can easily find what they are looking for and quickly navigate through the website was challenging but with proper planning and execution, it resulted in a unique and engaging website that showcases my resume.
 
@@ -24,24 +24,23 @@ Designing an intuitive navigation system so that the users can easily find what 
 
 A command line simulation.
 
-
 ## Current Commands
 
-Command | Description
-------- | -----------
-cat [FILE] | Concatenate files and print on the standard output.
-cd [dir] | Change the shell working directory.
-clear | Clear the terminal screen.
-download | Downloads the latest uploaded version of resume.
-help [command] | Display information about built-in commands.
-ls [FILE] | List directory contents.
-mkdir [DIRECTORIES] | Make directories.
-pwd | Print the name of the current working directory.
-projects | Prints some of my favorite projects.
-resume | Prints resume to terminal.
-tree [dir] | Prints tree of directories recursively starting from given dir location.
-whois divyanshu | Prints out my info.
+| Command             | Description                                                              |
+| ------------------- | ------------------------------------------------------------------------ |
+| cat [FILE]          | Concatenate files and print on the standard output.                      |
+| cd [dir]            | Change the shell working directory.                                      |
+| clear               | Clear the terminal screen.                                               |
+| download            | Downloads the latest uploaded version of resume.                         |
+| help [command]      | Display information about built-in commands.                             |
+| ls [FILE]           | List directory contents.                                                 |
+| mkdir [DIRECTORIES] | Make directories.                                                        |
+| pwd                 | Print the name of the current working directory.                         |
+| projects            | Prints some of my favorite projects.                                     |
+| resume              | Prints resume to terminal.                                               |
+| tree [dir]          | Prints tree of directories recursively starting from given dir location. |
+| whois divyanshu     | Prints out my info.                                                      |
 
-## Try it out 
+## Try it out
 
-[Click here](https://verma-divyanshu-git.github.io/terminalresume/)
+[Click here](https://divyanshuverma-portfolio.web.app/)
