@@ -2,10 +2,10 @@ const fileStructure =
 {
     divyanshu : 
     {
-      contact: '<div style="margin-bottom: 10px;"><b><a href="mailto: divyanshuu.12.09@gmail.com"><font style="line-height: 0px">&#128231;</font> divyanshuu.12.09@gmail.com</a></b></div>'
+      contact: '<br><div style="margin-bottom: 10px;"><b><a href="mailto: divyanshuu.12.09@gmail.com"><font style="line-height: 0px">&#128231;</font> divyanshuu.12.09@gmail.com</a></b></div>'
       + '<div style="margin-bottom: 10px;"><font style="line-height: 0px">&#128222;</font> +91 62806 51195</div>'
       + '<div style="margin-bottom: 10px;"><b><a href="https://github.com/verma-divyanshu-git"><img src="github-mark-white.svg" alt="Github:" height="' + document.getElementById("terminal").style.fontSize + '" width="relative"> verma-divyanshu-git </a></b></div>'
-      + '<div style="margin-bottom: 10px;"><b><a href="https://www.linkedin.com/in/divyanshu-verma-90b026236"><img src="linkedin.svg" alt="Linkedin:" height="' + document.getElementById("terminal").style.fontSize + '" width="relative"> <strong>linkedin</strong> </a></b></div>',
+      + '<div style="margin-bottom: 10px;"><b><a href="https://www.linkedin.com/in/divyanshu-verma-90b026236"><img src="linkedin.svg" alt="Linkedin:" height="' + document.getElementById("terminal").style.fontSize + '" width="relative"> <strong>linkedin</strong> </a></b></div> <br>',
       education: '<b class="dirColor"><a target="_blank" href="https://goo.gl/maps/uhEDb3tCcfv98qbf9">Punjab Engineering College, Chandigarh</a></b>'
                 + '<br>B.Tech in Computer Science and Engineering<br>Graduating 2025<br>CGPA: 8.88/10 <br>'
                 + '<b class="dirColor"><a target="_blank" href="https://goo.gl/maps/1perezkmPyWQEP568">DAV Public School, Patiala</a></b>'
@@ -43,11 +43,11 @@ const fileStructure =
                 + 'SAASC (Speaker’s Association and Study Circle) : Member <br>' 
                 + 'Entrepreneurship and Incubation Cell (EIC) : IB Member <br>'
                 + 'Les Amis : Permanent Member <br>'
-                + 'Google Developer Student Clubs (GDSC): Member',
+                + 'Google Developer Student Clubs (GDSC): Member <br>',
       
       
       
-      references: '<br><br><b>Professional References:</b><br>'
+      references: '<br><b>Professional References:</b><br>'
     + '<a href="https://pec.ac.in/cse/faculty/sanjeev-sofat"><b>Dr. Sanjeev Sofat</b></a><br>'
     + 'Professor(CSE) and Deputy Director, PEC University of Technology, Chandigarh<br>'
     + '<a href="mailto:sanjeevsofat@pec.edu.in"><i class="fa fa-envelope"></i> sanjeevsofat@pec.edu.in</a><br>'

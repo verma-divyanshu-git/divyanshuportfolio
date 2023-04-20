@@ -164,10 +164,11 @@ function resetActiveLine()
 
 var commandFinished = false;
 
-const helperText = ["whois divyanshu", "cat education", "cat por", "cat certifications" , "cat achievements", "cat references",
-                    "cat skills", "cat contact", "cd projects/",
+const helperText = ["whois divyanshu", "cat contact", "cat education", "cat skills", 
+                    "cat achievements", "cat certifications" , "cat por", "cat references",
+                    "cd projects/",
                     "cat blankify", "cat tunify",
-                    "cat mask-detector", "cat terminalresume", "tree .."];
+                    "cat Covid_Mask_Detector", "cat divyanshuportfolio", "tree .."];
 
 let terminalStuff = document.getElementById("not-welcome");
 let helpText = document.getElementById("help-text");
@@ -267,7 +268,7 @@ function typeNextCommand(i = 0)
       commandFinished = true;
       enterPress(helperText[0]);
       helperText.splice(0, 1);
-        if(helpCommandNum === 6)
+        if(helpCommandNum === 8)
         
         {
           helpText.innerHTML = `now we're going to check out some of the projects
@@ -275,7 +276,7 @@ function typeNextCommand(i = 0)
           commandFinished = false;
           typeNextCommand();
         }
-        if(helpCommandNum > 10)
+        if(helpCommandNum > 13)
         {
           helpText.innerHTML = `<font style="font-size: 70%">those are the highlights! i'm giving you control now.
            here's an outline of my resume. feel free to click on any sections
@@ -809,11 +810,13 @@ function resume()
   if(curDirStr !== '/divyanshu')
     runCommand('cd ' + locateDirectory('/divyanshu', curDirStr));
   runCommand("whois divyanshu");
-  runCommand('cat education');
-  runCommand('cat por');
-  runCommand('cat certifications');
-  runCommand('cat skills');
   runCommand('cat contact');
+  runCommand('cat education');
+  runCommand('cat skills');
+  runCommand('cat achievements');
+  runCommand('cat certifications');
+  runCommand('cat por');
+  runCommand('cat references');
 }
 
 // note: method of traversing to correct directory only works in linear file structure
@@ -825,8 +828,8 @@ function projects()
     runCommand('cd ' + locateDirectory('/divyanshu/projects', curDirStr));
   runCommand('cat blankify ');
   runCommand('cat tunify ');
-  runCommand('cat mask-detector ');
-  runCommand('cat terminalresume ');
+  runCommand('cat Covid_Mask_Detector');
+  runCommand('cat divyanshuportfolio ');
 }
 
 
