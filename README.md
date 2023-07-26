@@ -49,8 +49,8 @@ A command line simulation.
 
 ### Desktop
 
-![Desktop Performance](public/desktop.png)
+![Desktop Performance](/public/desktop.png)
 
 ### Mobile
 
-![Mobile Performance](public/mobile.png)
+![Mobile Performance](/public/mobile.png)
