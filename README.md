@@ -49,8 +49,8 @@ A command line simulation.
 
 ### Desktop
 
-![Desktop Performance](/public/desktop.png)
+![desktop](https://github.com/verma-divyanshu-git/divyanshuportfolio/assets/96394150/7da722a4-6ea3-4e7e-81cc-9402f1833547)
 
 ### Mobile
 
-![Mobile Performance](/public/mobile.png)
+![mobile](https://github.com/verma-divyanshu-git/divyanshuportfolio/assets/96394150/1d8126bb-f545-46fd-ac9c-3d6058e47c0b)
