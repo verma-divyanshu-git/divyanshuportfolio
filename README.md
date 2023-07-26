@@ -44,3 +44,13 @@ A command line simulation.
 ## Try it out
 
 [Click here](https://divyanshuverma-portfolio.web.app/)
+
+## PageSpeed Insights
+
+### Desktop
+
+![Desktop Performance](public/desktop.png)
+
+### Mobile
+
+![Mobile Performance](public/mobile.png)
