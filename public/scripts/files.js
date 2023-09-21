@@ -89,11 +89,9 @@ request.onload = function () {
     
     fileStructure["divyanshu"]["projects"][`${e.name}`] = description;
     
-    // lol!! this line of code is trash \/   \/ LOL!!
-    //eval('Object.assign(fileStructure.divyanshu.projects, {"' + e.name.replace(/-/g, '_') + '" : "' + description + '"});');
+
     
   });
-  // calls in resume.html context
   finishedAPICall();
 };
 
@@ -102,7 +100,6 @@ request.send();
 const whoisdivyanshu = `<br><font style="word-break: normal;">As a student at Punjab Engineering College, I have a keen interest in all aspects of computer science. I derive great pleasure from exploring the workings of various technologies and enhancing my knowledge through hands-on experimentation and tinkering. With a track record of successful participation in multiple hackathons, I possess the ability to effectively manage independent projects and collaborate seamlessly as part of a productive team.</font>`;
           
           
-// run this to see how many documents are being accessed
 function download()
 {
   let test = document?.getElementById("pdf");
