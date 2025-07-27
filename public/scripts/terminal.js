@@ -313,6 +313,10 @@ function typeNextCommand(i = 0)
   {
   setTimeout(() => {
         addText(helperText[0].charAt(i));
+        // Play keypress sound during guided tour typing
+        if (typeof soundManager !== 'undefined') {
+          soundManager.playKeyPress();
+        }
         typeNextCommand(i+1);
     }, Math.floor(Math.random() * 20 + 50));
   }
@@ -348,6 +352,10 @@ function normalInput()
       if(key === "Tab")
       {
         e.preventDefault();
+        // Play tab sound
+        if (typeof soundManager !== 'undefined') {
+          soundManager.playTab();
+        }
         
         let desiredDir = input.split(" ");
         if(desiredDir.length === 1)
@@ -452,6 +460,10 @@ function normalInput()
         history[historyIndex] += key;
         terminal.scrollTop = terminal.scrollHeight;
         tabNum = 0;
+        // Play keypress sound
+        if (typeof soundManager !== 'undefined') {
+          soundManager.playKeyPress();
+        }
       }
       
       else if(key === "Backspace")
@@ -465,10 +477,18 @@ function normalInput()
           {
             history[historyIndex] = history[historyIndex].substr(0, history[historyIndex].length - 1);
           }
+          // Play backspace sound
+          if (typeof soundManager !== 'undefined') {
+            soundManager.playBackspace();
+          }
         }
       }
       else if(key === "Enter")
       {
+        // Play enter sound
+        if (typeof soundManager !== 'undefined') {
+          soundManager.playEnter();
+        }
         enterPress(input);
       }
     }
@@ -501,7 +521,7 @@ function enterPress(enterInput)
           break;
           
         case 'pwd':
-          addText('<br>' + curDirStr);
+          addText('<br><span class="output-text">' + curDirStr + '</span>');
           newLine();
           break;
           
@@ -559,8 +579,16 @@ function enterPress(enterInput)
           fritos(enterInput.split(" ")[1]);
           break;
           
+        case 'sound':
+          toggleSound();
+          break;
+          
         default:
-          addText("<br>Unknown Command: " + enterInput.split(" ")[0]);
+          addText("<br><span class='error-text'>Unknown Command: " + enterInput.split(" ")[0] + "</span>");
+          // Play error sound for unknown commands
+          if (typeof soundManager !== 'undefined') {
+            soundManager.playError();
+          }
           newLine();
         }
       }
@@ -643,7 +671,7 @@ function whois(name)
 
 function newLine()
 {
-  addText("<br><font class='userColor'>divyanshu</font>:<font class='dirColor'>~" + curDirStr + "</font> $ ");
+  addText("<br><span class='command-text'>divyanshu</span>:<span class='highlight-text'>~" + curDirStr + "</span> $ ");
 }
 
 function mkdir(directories)
@@ -714,12 +742,12 @@ function cd(arg)
     let callCd = traverseDir(arg, currentDirectory, curDirStr);
     switch(callCd)
     {
-      case -1:
-        addText("<br>cd: " + arg + ": Not a directory");
-        break;
+        case -1:
+          addText("<br><span class='error-text'>cd: " + arg + ": Not a directory</span>");
+          break;
       
       case 1:
-        addText("<br>cd: " + arg + ": No such file or directory");
+        addText("<br><span class='error-text'>cd: " + arg + ": No such file or directory</span>");
         break;
       default:
         currentDirectory = callCd[0];
@@ -979,11 +1007,11 @@ function print(inpt)
       break;
     
   case 1:
-    addText('<br>cat: ' + inpt + ': No such file or directory');
+    addText('<br><span class="error-text">cat: ' + inpt + ': No such file or directory</span>');
     break;
     
   default:
-    addText('<br>cat: ' + inpt + ': Is a directory');
+    addText('<br><span class="error-text">cat: ' + inpt + ': Is a directory</span>');
   
   }
 }
@@ -1088,4 +1116,27 @@ function recedingDir(dir, dirStr)
   dirStr = dirStr.substr(0, dirStr.lastIndexOf("/"));
   dirStr.split("/").filter(e => e !== "").forEach(e => dir = dir[`${e}`]);
   return [dir, dirStr];
+}
+
+// Toggle sound effects on/off with visual feedback
+function toggleSound()
+{
+  if (typeof soundManager !== 'undefined') {
+    soundManager.toggleEnabled();
+    let status = soundManager.isEnabled() ? 'ON' : 'OFF';
+    let statusColor = soundManager.isEnabled() ? '#00ff00' : '#ff6666';
+    let icon = soundManager.isEnabled() ? '🔊' : '🔇';
+    
+    addText(`<br><span class="highlight-text">${icon} Sound effects: </span><span style="color: ${statusColor}; font-weight: bold;">${status}</span>`);
+    
+    // Play a test sound if enabling
+    if (soundManager.isEnabled()) {
+      setTimeout(() => {
+        soundManager.playKeyPress();
+      }, 100);
+    }
+  } else {
+    addText('<br><span class="error-text">❌ Sound system not available</span>');
+  }
+  newLine();
 }
