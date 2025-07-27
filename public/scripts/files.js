@@ -22,6 +22,7 @@ const fileStructure =
 
     projects:
     {
+      loading: "Loading projects from GitHub... Please wait.<br><font style='color: #888; font-size: 11px;'>This message will be replaced once the API call completes.</font>"
     },
 
     achievements: '- JEE Mains: Ranked 8906 (AIR) in JEE Mains, which is given by a pool of 1M+ candidates across the country.<br>' +
@@ -77,42 +78,86 @@ const fileStructure =
   }
 };
 
+// Configuration for GitHub integration
+const GITHUB_USERNAME = 'verma-divyanshu-git';
+
 var request = new XMLHttpRequest();
 
-request.open('GET', 'https://api.github.com/users/verma-divyanshu-git/repos', true)
+request.open('GET', `https://api.github.com/users/${GITHUB_USERNAME}/repos`, true);
 
 request.onload = function () {
-  var data = JSON.parse(this.response);
-  data.forEach(function (e) {
+  if (request.status >= 200 && request.status < 300) {
+    try {
+      var data = JSON.parse(this.response);
+      
+      // Clear the loading message
+      fileStructure["divyanshu"]["projects"] = {};
+      
+      // Filter public repositories and sort by last updated (most recent first)
+      var publicRepos = data.filter(function(e) {
+        return e.private === false;
+      }).sort(function(a, b) {
+        // Sort by last updated (most recent first)
+        return new Date(b.updated_at) - new Date(a.updated_at);
+      });
+      
+      if (publicRepos.length === 0) {
+        // Fallback if no public repositories found
+        fileStructure["divyanshu"]["projects"]["no_public_repos"] = "No public repositories found. Please check back later!";
+      } else {
+        publicRepos.forEach(function (e) {
+          let description = "<a target='_blank' href='" + e.html_url + "'><font style='line-height: 0px'>🔗</font><b>" + e.name + "</b></a><br>";
+          
+          // Add repository description
+          if (e.description !== null && e.description.trim() !== "") {
+            description += e.description + "<br>";
+          } else {
+            description += "Click the link to learn more about this project!<br>";
+          }
+          
+          // Add additional metadata
+          let metadata = [];
+          if (e.language) {
+            metadata.push("Language: " + e.language);
+          }
+          if (e.stargazers_count > 0) {
+            metadata.push("⭐ " + e.stargazers_count);
+          }
+          if (e.forks_count > 0) {
+            metadata.push("🍴 " + e.forks_count);
+          }
+          
+          if (metadata.length > 0) {
+            description += "<font style='color: #888; font-size: 11px;'>" + metadata.join(" | ") + "</font>";
+          }
+          
+          fileStructure["divyanshu"]["projects"][`${e.name}`] = description;
+        });
+      }
+    } catch (error) {
+      console.error('Error parsing GitHub API response:', error);
+      fileStructure["divyanshu"]["projects"] = {};
+      fileStructure["divyanshu"]["projects"]["api_error"] = "Error loading projects from GitHub. Please check back later!";
+    }
+  } else {
+    console.error('GitHub API request failed with status:', request.status);
+    fileStructure["divyanshu"]["projects"] = {};
+    fileStructure["divyanshu"]["projects"]["api_error"] = "Unable to load projects from GitHub (API Error: " + request.status + "). Please check back later!";
+  }
+  finishedAPICall();
+};
 
-    let description = "<a target='_blank' href='" + e.html_url + "'><font style='line-height: 0px'>&#128279;</font><b>" + e.full_name + "</b></a><br>"
-      + (e.description ?? "click the link to learn more about this project!");
-
-    fileStructure["divyanshu"]["projects"][`${e.name}`] = description;
-<<<<<<< Updated upstream
-    
-
-    
-=======
-
->>>>>>> Stashed changes
-  });
+request.onerror = function() {
+  console.error('GitHub API request failed due to network error');
+  fileStructure["divyanshu"]["projects"] = {};
+  fileStructure["divyanshu"]["projects"]["network_error"] = "Network error while loading projects from GitHub. Please check your connection!";
   finishedAPICall();
 };
 
 request.send();
-
-<<<<<<< Updated upstream
-const whoisdivyanshu = `<br><font style="word-break: normal;">As a student at Punjab Engineering College, I have a keen interest in all aspects of computer science. I derive great pleasure from exploring the workings of various technologies and enhancing my knowledge through hands-on experimentation and tinkering. With a track record of successful participation in multiple hackathons, I possess the ability to effectively manage independent projects and collaborate seamlessly as part of a productive team.</font>`;
-          
-          
-function download()
-{
-=======
 const whoisdivyanshu = `<br><font style="word-break: normal;">As a Computer Science undergraduate at Punjab Engineering College, I am passionate about systems, backend engineering, and problem solving. I enjoy hands-on experimentation, and have consistently applied my skills through two impactful internships at Cisco (SDE) and iRage Capital (Quant/HFT). A strong performer in competitive programming with top global ranks, I thrive both in independent projects and collaborative, fast-paced environments.</font>`;
 
 function download() {
->>>>>>> Stashed changes
   let test = document?.getElementById("pdf");
   console.log("print");
 }

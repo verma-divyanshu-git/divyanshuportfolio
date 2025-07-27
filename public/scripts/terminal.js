@@ -750,9 +750,53 @@ function ls(inpt)
       newLine();
       return;
     }
+    
+    // Special handling for projects directory
+    if(curDirStr === '/divyanshu/projects') {
+      addText('<br><font style="color: #00ff00; font-weight: bold;">📂 GitHub Projects (sorted by 📅 recent updates):</font><br><br>');
+      
+      let projectKeys = Object.keys(currentDirectory);
+      projectKeys.forEach(function(item, index) {
+        let projectData = currentDirectory[item];
+        
+        // Extract basic info from the HTML content
+        let projectName = item;
+        let isStarred = projectData.includes('⭐');
+        let hasLanguage = projectData.includes('Language:');
+        
+        // Create a nice summary line
+        let summary = `<font style="color: #ffffff; font-weight: bold;">${index + 1}. ${projectName}</font>`;
+        
+        if(isStarred) {
+          let starMatch = projectData.match(/⭐ (\d+)/);
+          if(starMatch) {
+            summary += ` <font style="color: #ffff00;">⭐ ${starMatch[1]}</font>`;
+          }
+        }
+        
+        if(hasLanguage) {
+          let langMatch = projectData.match(/Language: ([^|]+)/);
+          if(langMatch) {
+            summary += ` <font style="color: #888;">[${langMatch[1].trim()}]</font>`;
+          }
+        }
+        
+        addText(summary + '<br>');
+      });
+      
+      addText('<br><font style="color: #888; font-size: 11px;">💡 Use "cat <project-name>" to see full details, or "projects" to see all at once</font>');
+      newLine();
+      return;
+    }
+    
+    // Default ls behavior for other directories
     addText('<br>');
-    //let arr = Object.keys(currentDirectory);
-    Object.keys(currentDirectory).sort().forEach(function(item) { if(isFolder(item, currentDirectory)) addText('<font class="dirColor">' + item + ' </font>'); else addText(item + ' ');});
+    Object.keys(currentDirectory).sort().forEach(function(item) { 
+      if(isFolder(item, currentDirectory)) 
+        addText('<font class="dirColor">' + item + ' </font>'); 
+      else 
+        addText(item + ' ');
+    });
     newLine();
     return;
   }
@@ -826,10 +870,23 @@ function projects()
   newLine();
   if(curDirStr !== '/divyanshu/projects')
     runCommand('cd ' + locateDirectory('/divyanshu/projects', curDirStr));
-  runCommand('cat blankify ');
-  runCommand('cat tunify ');
-  runCommand('cat Covid_Mask_Detector');
-  runCommand('cat divyanshuportfolio ');
+  
+  // Show all GitHub projects dynamically
+  addText('<br><font style="color: #00ff00; font-weight: bold;">🎆 Showcasing All GitHub Projects:</font><br><br>');
+  
+  let projectKeys = Object.keys(fileStructure.divyanshu.projects);
+  let count = 0;
+  
+  projectKeys.forEach(function(projectName) {
+    count++;
+    addText(`<font style="color: #ffffff; font-weight: bold;">[${count}] ${projectName.toUpperCase()}</font><br>`);
+    addText('<font style="color: #888;">========================</font><br>');
+    addText(fileStructure.divyanshu.projects[projectName]);
+    addText('<br><br>');
+  });
+  
+  addText('<font style="color: #888; font-size: 11px;">📊 Total Projects: ' + count + ' | Updated automatically from GitHub API</font>');
+  newLine();
 }
 
 
