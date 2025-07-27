@@ -1,105 +1,157 @@
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" name="divyanshu's terminal-style portfolio website" content="width=device-width">
-<title>my portfolio</title>
-<style>
+  <meta charset="UTF-8" name="divyanshu's terminal-style portfolio website" content="width=device-width">
+  <title>my portfolio</title>
+  <style>
+    body {
+      background-color: black;
+      font-family: monospace;
+      color: white;
+      justify-content: center;
+      align-items: center;
+    }
 
-body {
-  background-color: black;
-  font-family: monospace;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    #cursor {
+      display: inline-block;
+      background-color: white;
+      border-style: solid;
+      border-width: 1px;
+      border-color: white;
+      font-size: 2vw;
+    }
 
-#cursor {
-  display: inline-block;
-  background-color: white;
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  font-size: 2vw;
-}
+    #terminal-wrap {
+      width: 95%;
+      background-color: black;
+      display: flex;
+      align-items: flex-start;
+      padding: 5px;
+      border: 1px solid white;
+      overflow: hidden;
+    }
 
-#terminal-wrap {
-  width: 95%;
-  background-color: black;
-  display: flex;
-  align-items: flex-start;
-  padding: 5px;
-  border: 1px solid white;
-  overflow: hidden;
-}
+    #terminal {
+      top: 5px;
+      bottom: 5px;
+      width: 100%;
+      background-color: black;
+    }
+  </style>
 
-#terminal {
-  top: 5px;
-  bottom: 5px;
-  width: 100%;
-  background-color: black;
-}
-</style>
 <body>
-    <h1 style="text-align: center;">view on desktop for an interactive terminal!</h1>
-    <div id="terminal-wrap">
-  <div style="font-size: 0;">
-<span id="terminal" style="font-size: 2.2vw; height: 370px;">
+  <h1 style="text-align: center;">view on desktop for an interactive terminal!</h1>
+  <div id="terminal-wrap">
+    <div style="font-size: 0;">
+      <span id="terminal" style="font-size: 2.2vw; height: 370px;">
         <div id="date" style="font-size: 2.2vw;"></div>
-        <b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat whois divyanshu <br>
-        As a student at Punjab Engineering College, I have a keen interest in all aspects of computer science. I derive great pleasure from exploring the workings of various technologies and enhancing my knowledge through hands-on experimentation and tinkering. With a track record of successful participation in multiple hackathons, I possess the ability to effectively manage independent projects and collaborate seamlessly as part of a productive team.<br>
-        <b><font color="lime">divyanshu</font>:~/divyanshu $</b>
-        <b><font color="lime">divyanshu</font>:~/divyanshu $</b>
-        cat contact <br><b><a href="mailto: divyanshuu.12.09@gmail.com"><font style="font-size: 2.2vw; line-height: 0px">📧</font> divyanshuu.12.09@gmail.com</a><br><font style="font-size: 2.2vw; line-height: 0px">📞</font> +91 62806 51195<br><a href="https://github.com/verma-divyanshu-git"><img src="github-mark-white.svg" alt="Github:" width="relative" height="13vw"> verma-divyanshu-git</a></b><br><b><a href="https://www.linkedin.com/in/divyanshu-verma-90b026236"><img src="linkedin.svg" alt="Linkedin:" width="relative" height="13vw"> linkedin</a></b> <br><b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat education <br><b style="color: DodgerBlue"><a target="_blank" href="https://goo.gl/maps/uhEDb3tCcfv98qbf9">Punjab Engineering College, Chandigarh</a></b><br>B.Tech in Computer Science and Engineering<br>Graduating 2025<br>CGPA: 8.88/10<br><b style="color: DodgerBlue"><a target="_blank" href="https://goo.gl/maps/1perezkmPyWQEP568">DAV Public School, Patiala</a></b><br>XII (91.8 %) <br> Graduated 2021 <br> <b style="color: DodgerBlue"><a target="_blank" href="https://goo.gl/maps/1perezkmPyWQEP568">DAV Public School, Patiala</a></b><br>X (91.82 %) <br> Graduated 2019 <br> <b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat por <br> PEC-ACM CSS Student Chapter : Member <br> Asset Management Club (AMC-PEC) : Event Manager <br> SAASC (Speaker’s Association and Study Circle) : Member <br> Entrepreneurship and Incubation Cell (EIC) : IB Member <br> Les Amis : Permanent Member <br>Google Developer Student Clubs (GDSC): Member <br> <b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat skills <br>-  Interpersonal Skills: Fast Learner, Problem Solving, Analytical Thinking, Active Listener, Teamwork, Growth Mindset, Code Analysis and Development, Onsite & Digital Marketing
-        <br> - Programing Languages: C++, JavaScript, Python, SQL, HTML, CSS, Unix Shell, Assembly <br>
-        - Mathematics: Linear Algebra (Basics), Discrete Structures, Probability and Statistics, Calculus and Ordinary Differential Equations <br>
-        - CS subjects: Operating System, Computer Network, DBMS, OOPS, DSA <br>
-        - Tools: Git, Linux, Bash, VS Code, LATEX, Chrome Dev Tools <br>
-        - Libraries/Frameworks: Firebase, C++ STL, OpenCV, Bootstrap'<br> 
-        <b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat achievements <br>
-        - JEE Mains : Ranked 8906 (AIR) in JEE Mains, which is given by a pool of 1M+ candidates across the country.<br>
-        - BITSAT : Scored 318 in BITSAT 2021.<br>
-        - JEE Adv : Qualified JEE Advance, one of the most prestigious and toughest exams of the country.<br>
-        - HackerRank : 4 star C++ Badge on HackerRank, Silver level, earned 170 points.<br>
-        - Pre-RMO : Qualified Pre-RMO, first stage of the International Mathematics Olympiad which covers pre-college math topics, especially algebra, number theory, combinatorics, and geometry.<br>
-        - Organizing Committee : Worked in the OC of the event "Silent Disco" (Les Amis), E-Summit\'22 (EIC) and PECFEST-Creative Committee.<br>
-        <b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat certifications <br>
+        <b>
+          <font color="lime">divyanshu</font>:~/divyanshu $
+        </b> cat whois divyanshu <br>
+        As a Computer Science undergraduate at Punjab Engineering College, I am passionate about systems, backend
+        engineering,
+        and problem solving. I enjoy hands-on experimentation, and have consistently applied my skills through two
+        impactful
+        internships at Cisco (SDE) and iRage Capital (Quant/HFT). A strong performer in competitive programming with top
+        global
+        ranks, I thrive both in independent projects and collaborative, fast-paced environments.<br>
+        <b>
+          <font color="lime">divyanshu</font>:~/divyanshu $
+        </b>
+        <b>
+          <font color="lime">divyanshu</font>:~/divyanshu $
+        </b>
+        cat contact <br><b><a href="mailto: divyanshuu.12.09@gmail.com">
+            <font style="font-size: 2.2vw; line-height: 0px">📧</font> divyanshuu.12.09@gmail.com
+          </a><br>
+          <font style="font-size: 2.2vw; line-height: 0px">📞</font> +91 62806 51195<br><a
+            href="https://github.com/verma-divyanshu-git"><img src="github-mark-white.svg" alt="Github:"
+              width="relative" height="13vw"> verma-divyanshu-git</a>
+        </b><br><b><a href="https://www.linkedin.com/in/divyanshu-verma-90b026236"><img src="linkedin.svg"
+              alt="Linkedin:" width="relative" height="13vw"> linkedin</a></b> <br><b>
+          <font color="lime">divyanshu</font>:~/divyanshu $
+        </b> cat education <br><b style="color: DodgerBlue"><a target="_blank"
+            href="https://goo.gl/maps/uhEDb3tCcfv98qbf9">Punjab Engineering College, Chandigarh</a></b><br>B.Tech in
+        Computer Science and Engineering<br>Graduating 2025<br>CGPA: 8.6/10<br><b style="color: DodgerBlue"><a
+            target="_blank" href="https://goo.gl/maps/1perezkmPyWQEP568">DAV Public School, Patiala</a></b><br>XII (91.8
+        %) <br> Graduated 2021 <br> <b style="color: DodgerBlue"><a target="_blank"
+            href="https://goo.gl/maps/1perezkmPyWQEP568">DAV Public School, Patiala</a></b><br>X (91.82 %) <br>
+        Graduated 2019 <br> <b>
+          <font color="lime">divyanshu</font>:~/divyanshu $
+        </b> cat por <br> PEC-ACM CSS Student Chapter : Member <br> Asset Management Club (AMC-PEC) : Event Manager <br>
+        SAASC (Speaker’s Association and Study Circle) : Member <br> Entrepreneurship and Incubation Cell (EIC) : IB
+        Member <br> Les Amis : Permanent Member <br>Google Developer Student Clubs (GDSC): Member <br> <b>
+          <font color="lime">divyanshu</font>:~/divyanshu $
+        </b> cat skills <br> - Interpersonal Skills: Fast Learner, Problem Solving, Analytical Thinking, Teamwork,
+        Growth Mindset, Code Analysis
+        and Development, Active Listener, Debugging, System Design<br>
+        <br> - Programming Languages: C++, Java, Python, SQL, Bash<br>
+        <br> - Mathematics: Linear Algebra, Discrete Structures, Probability and Statistics, Calculus<br>
+        <br> - CS Subjects: Operating Systems, Computer Networks, DBMS, OOPs, DSA<br>
+        <br> - Tools: Git, Linux, Docker, Jenkins, Postman, Kubernetes, Apache Spark, GDB, VS Code, LaTeX<br>
+        <br> - Libraries/Frameworks: Spring Boot, Django, Flask, React.js, Node.js, JobRunr, TensorFlow, SQLAlchemy,
+        Micrometer,
+        Prometheus, Grafana, C++ STL<br>
+        <b>
+          <font color="lime">divyanshu</font>:~/divyanshu $
+        </b> cat achievements <br>
+        - JEE Mains: Ranked 8906 (AIR) in JEE Mains, which is given by a pool of 1M+ candidates across the country.<br>
+        - BITSAT: Scored 318 in BITSAT 2021.<br>
+        - JEE Adv: Qualified JEE Advanced, one of the most prestigious and toughest exams in the country.<br>
+        - Flipkart Grid 6.0: Semi-Finalist with a National Rank < 20 among ~500,000 participants.<br>
+          - Codeforces: Reached Expert (Max Rating: 1702), ranked globally 281 (Div-2), 959 (Div-2), and 606 (Div-3) in
+          Rounds
+          795, 794, and 786 respectively.<br>
+          - Leetcode: Max Rating 1990 (Knight), with top global ranks of 185 (Biweekly 129) and 516 (Biweekly 131).<br>
+          - STGI Hackathon: Winner in both 2022 and 2023 editions with NLP and Django-based projects.<br>
+          - Amazon ML Summer School 2023: Selected from a pool of ~46,000 applicants.<br>
+          - 30 Days of Google Cloud: Completed Google Cloud Platform training program.<br>
+          <b>
+            <font color="lime">divyanshu</font>:~/divyanshu $
+          </b> cat certifications <br>
           <a href="https://graduation.udacity.com/confirm/WHGUKMTS">AWS Machine Learning Foundations: Udacity</a><br>
-          <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_yLFupGR3PppGnQiPk_1660256281637_completion_certificate.pdf">Virtual Experience Program Participant: Goldman Sachs</a><br>
-          <a href="https://googlecloud.qwiklabs.com/public_profiles/a5d24d38-4244-4b50-9aa9-31ab7763ea2e">30 Days of Google Cloud: Hands on practice on Google Cloud Platform</a><br>
-          <a href="https://www.coursera.org/account/accomplishments/certificate/Q85AWHNFCGPT">Stock Valuation with Comparable Companies Analysis: Coursera</a><br>
-        <b><font color="lime">divyanshu</font>:~/divyanshu $</b> cat references <br>
-        <b>Professional References:</b><br>
-        <a href="https://pec.ac.in/cse/faculty/sanjeev-sofat"><b>Dr. Sanjeev Sofat</b></a><br>
-        Professor(CSE) and Deputy Director, PEC University of Technology, Chandigarh<br>
-        <a href="mailto:sanjeevsofat@pec.edu.in"><i class="fa fa-envelope"></i>sanjeevsofat@pec.edu.in</a><br>
-      <span id="projects"><a href="#" onclick="javascript:revealProjects()"><b style="color: DodgerBlue"><br>Tap to show projects</b></a></span>
+          <a
+            href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_yLFupGR3PppGnQiPk_1660256281637_completion_certificate.pdf">Virtual
+            Experience Program Participant: Goldman Sachs</a><br>
+          <a href="https://googlecloud.qwiklabs.com/public_profiles/a5d24d38-4244-4b50-9aa9-31ab7763ea2e">30 Days of
+            Google Cloud: Hands on practice on Google Cloud Platform</a><br>
+          <a href="https://www.coursera.org/account/accomplishments/certificate/Q85AWHNFCGPT">Stock Valuation with
+            Comparable Companies Analysis: Coursera</a><br>
+          <b>
+            <font color="lime">divyanshu</font>:~/divyanshu $
+          </b> cat references <br>
+          <b>Professional References:</b><br>
+          <a href="https://pec.ac.in/cse/faculty/sanjeev-sofat"><b>Dr. Sanjeev Sofat</b></a><br>
+          Professor(CSE) and Deputy Director, PEC University of Technology, Chandigarh<br>
+          <a href="mailto:sanjeevsofat@pec.edu.in"><i class="fa fa-envelope"></i>sanjeevsofat@pec.edu.in</a><br>
+          <span id="projects"><a href="#" onclick="javascript:revealProjects()"><b style="color: DodgerBlue"><br>Tap to
+                show projects</b></a></span>
       </span>
-          </div>
-</div>
-<script src="./scripts/files.js"></script>
-<script>
+    </div>
+  </div>
+  <script src="./scripts/files.js"></script>
+  <script>
 
     if (!navigator.userAgent.match(/Android/i)
-    && !navigator.userAgent.match(/webOS/i)
-    && !navigator.userAgent.match(/iPhone/i)
-    && !navigator.userAgent.match(/iPad/i)
-    && !navigator.userAgent.match(/iPod/i)
-    && !navigator.userAgent.match(/BlackBerry/i)
-    && !navigator.userAgent.match(/Windows Phone/i))
-{
-    document.location = "index.html";
-}
+      && !navigator.userAgent.match(/webOS/i)
+      && !navigator.userAgent.match(/iPhone/i)
+      && !navigator.userAgent.match(/iPad/i)
+      && !navigator.userAgent.match(/iPod/i)
+      && !navigator.userAgent.match(/BlackBerry/i)
+      && !navigator.userAgent.match(/Windows Phone/i)) {
+      document.location = "index.html";
+    }
 
 
     const dateS = new Date();
     document.getElementById("date").innerHTML = "<font color='grey'>" + dateS + "</font>";
-    function revealProjects()
-    {
-        document.getElementById("projects").innerHTML = 
+    function revealProjects() {
+      document.getElementById("projects").innerHTML =
         `<b><font color="lime">divyanshu</font>:~/divyanshu $</b> cd projects/<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat blankify <br>
         ${fileStructure["divyanshu"]["projects"]["blankify"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat tunify <br>
         ${fileStructure["divyanshu"]["projects"]["tunify"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat hostel-management <br>
@@ -108,6 +160,7 @@ a {
         ${fileStructure["divyanshu"]["projects"]["Covid_Mask_Detector"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> cat divyanshuportfolio <br>
         ${fileStructure["divyanshu"]["projects"]["divyanshuportfolio"]}<br><b><font color="lime">divyanshu</font>:~/divyanshu/projects $</b> <font id="cursor" style="background-color: white;">&nbsp;</font>`;
     }
-</script>
+  </script>
 </body>
+
 </html>

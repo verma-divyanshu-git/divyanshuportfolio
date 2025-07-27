@@ -848,7 +848,7 @@ function locateDirectory(desiredDir, currentWorkingDirectoryStr)
   // thank you
   // i just want someone to love me yk man
   // i feel you broski but this is not really the time to get into this
-  // then when is the time? when can i express myself ever if not now? can you hear my singing? can you feel my every escaping breath?
+  // then when is the time? when can i express myself ev  er if not now? can you hear my singing? can you feel my every escaping breath?
   // what the fuck are you talking about
   // the government has been giving the homeless population supplements containing methamphetamine in order to supress their cries
   let lastCommonIndex = -1;

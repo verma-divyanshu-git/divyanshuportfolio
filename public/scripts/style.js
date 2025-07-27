@@ -9,31 +9,6 @@ if (navigator.userAgent.match(/Android/i)
     document.location = "mobile.html";
 }
 
-/*
-var terminal = document.getElementById("terminal");
-var height1 = document.getElementById("terminal-wrap").clientHeight;
-var height = Math.round(document.body.scrollHeight * .5625 / height1) * height1;
-var width = terminal.clientWidth;
-document.getElementById("terminal-wrap").style.height = height + "px";
-terminal.style.height = height + "px";
-
-terminal.addEventListener('wheel', function(e)
-{
-    var delta = e.deltaY || e.detail || e.wheelDelta;
-    if (delta < 0)
-    {
-    e.preventDefault();
-    terminal.scrollTop -= height1;
-    }
-    else
-    {
-        e.preventDefault();
-        terminal.scrollTop += height1;
-    }
-});
-
-*/
-  
 document.getElementById("themeWrapper").onmouseleave = () => changeOrder();
 var theme1 = document.getElementById("first");
 var theme2 = document.getElementById("second");
@@ -68,8 +43,6 @@ var subtitle = document.getElementById("subtitle");
 var subCursor = document.getElementById("subtitle-cursor");
 var downloadButton = document.getElementById("download-button");
 
-// reveal title
-
 var titleText = "Hi, my name's Divyanshu!"
 var subtitleText = "The following website is one of my projects that showcases my portfolio inside an interactive and navigable temrinal si";
 var subtitleTextTwo = "rminal simulation";
@@ -79,7 +52,6 @@ function revealText(i = 0)
 {
     if(i > titleText.length)
     {
-        // call next action
         document.getElementById("title-cursor").style.visibility = "hidden";
         subCursor.style.visibility = "visible";
         revealSubtitle();
@@ -98,7 +70,6 @@ function revealSubtitle(i = 0)
 {
     if(i > subtitleText.length)
     {
-        // call next action
         setTimeout(() => {
             deleteMistake();
         }, 150);
@@ -117,7 +88,6 @@ function deleteMistake(i = 0)
 {
     if(i === numDeleted)
     {
-        // call next action
         correctMistake();
         return;
     }
@@ -136,7 +106,6 @@ function correctMistake(i = 0)
     {
         if(!animationFinished)
         {
-            // call next action
             animationFinished = true;
             cursorBlink();
             buttons.style.transform = "translate(0, 0)";
@@ -181,7 +150,6 @@ document.onkeydown = function skipAnimation()
         subtitle.innerHTML = subtitleText.substring(0, subtitleText.length - numDeleted) + subtitleTextTwo;
         cursorBlink();
         
-        // bypass animation
         buttons.classList.add('notransition');
         buttons.style.transform = "translate(0, 0)";
         buttons.offsetHeight;
