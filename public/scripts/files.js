@@ -2,37 +2,42 @@ const fileStructure =
 {
   divyanshu:
   {
-    contact: '<br><div style="margin-bottom: 10px;"><b><a href="mailto: divyanshuu.12.09@gmail.com"><font style="line-height: 0px">&#128231;</font> divyanshuu.12.09@gmail.com</a></b></div>'
-      + '<div style="margin-bottom: 10px;"><font style="line-height: 0px">&#128222;</font> +91 62806 51195</div>'
+    contact: '<br><div style="margin-bottom: 10px;"><b><a href="mailto: vrmadiv@gmail.com"><font style="line-height: 0px">&#128231;</font> vrmadiv@gmail.com</a></b></div>'
+      + '<div style="margin-bottom: 10px;"><b><a href="mailto: divyanshuu.12.09@gmail.com"><font style="line-height: 0px">&#128231;</font> divyanshuu.12.09@gmail.com</a></b></div>'
+      + '<div style="margin-bottom: 10px;"><font style="line-height: 0px">&#128222;</font> +91-6280651195</div>'
       + '<div style="margin-bottom: 10px;"><b><a href="https://github.com/verma-divyanshu-git"><img src="github-mark-white.svg" alt="Github:" height="' + document.getElementById("terminal").style.fontSize + '" width="relative"> verma-divyanshu-git </a></b></div>'
-      + '<div style="margin-bottom: 10px;"><b><a href="https://www.linkedin.com/in/divyanshu-verma-90b026236"><img src="linkedin.svg" alt="Linkedin:" height="' + document.getElementById("terminal").style.fontSize + '" width="relative"> <strong>linkedin</strong> </a></b></div> <br>',
+      + '<div style="margin-bottom: 10px;"><b><a href="https://divyanshuverma-portfolio.web.app/"><font style="line-height: 0px">🌐</font> Portfolio</a></b></div>'
+      + '<div style="margin-bottom: 10px;"><b><a href="https://www.linkedin.com/in/divyanshu-90b026236/"><img src="linkedin.svg" alt="Linkedin:" height="' + document.getElementById("terminal").style.fontSize + '" width="relative"> <strong>linkedin</strong> </a></b></div> <br>',
     education: '<b class="dirColor"><a target="_blank" href="https://goo.gl/maps/uhEDb3tCcfv98qbf9">Punjab Engineering College, Chandigarh</a></b>'
-      + '<br>B.Tech in Computer Science and Engineering<br>Graduating 2025<br>CGPA: 8.6/10 <br>'
+      + '<br>B.Tech in Computer Science and Engineering<br>2021-2025<br>CGPA: 8.6/10 <br>'
       + '<b class="dirColor"><a target="_blank" href="https://goo.gl/maps/1perezkmPyWQEP568">DAV Public School, Patiala</a></b>'
       + '<br>XII (91.8 %)<br>Graduated 2021 <br>'
       + '<b class="dirColor"><a target="_blank" href="https://goo.gl/maps/1perezkmPyWQEP568">DAV Public School, Patiala</a></b>'
       + '<br>X (91.82 %)<br>Graduated 2019<br>',
 
-    skills: '- Interpersonal Skills: Fast Learner, Problem Solving, Analytical Thinking, Active Listener, Teamwork, Growth Mindset, Code Analysis and Development, Debugging, System Design <br>'
-      + '- Programming Languages: C++, Java, Python, SQL, Bash <br>'
-      + '- Mathematics: Linear Algebra, Discrete Structures, Probability and Statistics, Calculus <br>'
-      + '- CS subjects: Operating Systems, Computer Networks, DBMS, OOPS, DSA <br>'
-      + '- Tools: Git, Linux, Docker, Jenkins, Postman, Kubernetes, Apache Spark, GDB, VS Code, LaTeX <br>'
-      + '- Libraries/Frameworks: Spring Boot, Django, Flask, React.js, Node.js, JobRunr, TensorFlow, SQLAlchemy, Micrometer, Prometheus, Grafana, C++ STL <br>',
+    skills: '- Programming Languages: C++, Java, Python, SQL, Bash <br>'
+      + '- AI/ML Stack: TensorFlow, PyTorch, Scikit-Learn, Pandas, NumPy, OpenCV <br>'
+      + '- Backend Development: Django, NodeJS, Flask, REST APIs, Distributed Systems, Microservices <br>'
+      + '- Databases: MySQL, PostgreSQL, MongoDB <br>'
+      + '- DevOps & Tools: Docker, Kubernetes, Jenkins, Git, Linux, Apache Spark, SonarQube, Postman <br>'
+      + '- Cloud & Infrastructure: AWS, Google Cloud Platform, CI/CD, ACME, OpenSSL <br>'
+      + '- Professional Skills: Agile Development, Unit Testing, Code Reviews, Cross-functional Collaboration, Technical Documentation, Problem-solving, Continuous Learning <br>',
 
     projects:
     {
       loading: "Loading projects from GitHub... Please wait.<br><font style='color: #888; font-size: 11px;'>This message will be replaced once the API call completes.</font>"
     },
 
-    achievements: '- JEE Mains: Ranked 8906 (AIR) in JEE Mains, which is given by a pool of 1M+ candidates across the country.<br>' +
-      '- BITSAT: Scored 318 in BITSAT 2021.<br>' +
-      '- JEE Adv: Qualified JEE Advanced, one of the most prestigious and toughest exams in the country.< br >' +
-      '- Flipkart Grid 6.0: Semi - Finalist with a National Rank< 20 among ~500,000 participants.< br >' +
-      '- Codeforces: Reached Expert(Max Rating: 1702), ranked globally 281(Div - 2), 959(Div - 2), and 606(Div - 3) in Rounds 795, 794, and 786 respectively.<br>' +
-      '- Leetcode: Max Rating 1990(Knight), with top global ranks of 185(Biweekly 129) and 516(Biweekly 131).< br >' +
-      '- STGI Hackathon: Winner in both 2022 and 2023 editions with NLP and Django - based projects.< br >' +
-      '- Amazon ML Summer School 2023: Selected from a pool of ~46,000 applicants.< br >',
+    achievements: '- Flipkart Grid 6.0: Semi-Finalist with a National Rank < 20 among ~500,000 participants <br>' +
+      '- Codeforces: Reached Expert (Max Rating: 1702), Profile: crabbyXpiggy <br>' +
+      '- Contest Ranks: Best Global Ranks of 281 (Div-2), 959 (Div-2) and 606 (Div-3) in Codeforces Rounds 795, 794 and 786 <br>' +
+      '- Leetcode: Max Rating 1990 (Knight), Profile: divyanshuverma <br>' +
+      '- Contest Ranks: Best Global Ranks of 185 (Biweekly Contest 129) out of 25,287 participants and 516 (Biweekly Contest 131) out of 30,286 participants <br>' +
+      '- STGI Sponsored Hackathon Winner (2022, 2023): Developed NLP based and Django based projects respectively <br>' +
+      '- Amazon ML Summer School 2023: Selected out of tentatively 46,000 applicants <br>' +
+      '- JEE Mains: Ranked 8906 (AIR) in JEE Mains, which is given by a pool of 1M+ candidates across the country <br>' +
+      '- BITSAT: Scored 318 in BITSAT 2021 <br>' +
+      '- JEE Advanced: Qualified JEE Advanced, one of the most prestigious and toughest exams in the country <br>',
 
     certifications: '<a href="https://graduation.udacity.com/confirm/WHGUKMTS">AWS Machine Learning Foundations: Udacity</a><br>'
       + '<a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Goldman%20Sachs/NPdeQ43o8P9HJmJzg_Goldman%20Sachs_yLFupGR3PppGnQiPk_1660256281637_completion_certificate.pdf">Virtual Experience Program Participant: Goldman Sachs</a><br>'
@@ -155,7 +160,19 @@ request.onerror = function() {
 };
 
 request.send();
-const whoisdivyanshu = `<br><font style="word-break: normal;">As a Computer Science undergraduate at Punjab Engineering College, I am passionate about systems, backend engineering, and problem solving. I enjoy hands-on experimentation, and have consistently applied my skills through two impactful internships at Cisco (SDE) and iRage Capital (Quant/HFT). A strong performer in competitive programming with top global ranks, I thrive both in independent projects and collaborative, fast-paced environments.</font>`;
+const whoisdivyanshu = `<br><font style="word-break: normal;">Computer Science graduate from Punjab Engineering College with a passion for systems, backend engineering, and problem-solving. I have successfully applied my skills through impactful internships at Cisco (SDE) and iRage Capital (Quant/HFT), gaining hands-on experience in certificate automation, high-frequency trading, and distributed systems. A strong performer in competitive programming with Expert rating on Codeforces and Knight rating on LeetCode, I excel in both independent projects and collaborative, fast-paced environments. Always eager to tackle complex technical challenges and drive innovation through clean, efficient code.</font>`;
+
+// Global flag to track API completion
+var apiCallCompleted = false;
+
+// Function called by resume.html after GitHub API call finishes
+function finishedAPICall() {
+  apiCallCompleted = true;
+  // Update helper text with top 3 recent projects
+  if (typeof updateHelperTextWithProjects === 'function') {
+    updateHelperTextWithProjects();
+  }
+}
 
 function download() {
   let test = document?.getElementById("pdf");

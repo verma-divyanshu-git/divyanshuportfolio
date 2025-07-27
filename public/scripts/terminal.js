@@ -164,11 +164,25 @@ function resetActiveLine()
 
 var commandFinished = false;
 
-const helperText = ["whois divyanshu", "cat contact", "cat education", "cat skills", 
+// Dynamic helper text - will be populated after GitHub API call
+let helperText = ["whois divyanshu", "cat contact", "cat education", "cat skills", 
                     "cat achievements", "cat certifications" , "cat por", "cat references",
-                    "cd projects/",
-                    "cat blankify", "cat tunify",
-                    "cat Covid_Mask_Detector", "cat divyanshuportfolio", "tree .."];
+                    "cd projects/"];
+
+// Function to update helper text with top 3 recent projects
+function updateHelperTextWithProjects() {
+  const projectKeys = Object.keys(fileStructure.divyanshu.projects);
+  // Get top 3 projects (they're already sorted by recent updates)
+  const topProjects = projectKeys.slice(0, 3);
+  
+  // Add the project commands to helper text
+  topProjects.forEach(project => {
+    helperText.push(`cat ${project}`);
+  });
+  
+  // Add the final tree command
+  helperText.push("tree ..");
+}
 
 let terminalStuff = document.getElementById("not-welcome");
 let helpText = document.getElementById("help-text");
@@ -237,6 +251,12 @@ var helpCommandNum = 0;
 
 function readyForHelper()
 {
+  // Wait for API call to complete before starting guided tour
+  if (typeof apiCallCompleted !== 'undefined' && !apiCallCompleted) {
+    setTimeout(() => readyForHelper(), 500);
+    return;
+  }
+  
   document.onkeydown = function(e)
   {
     helpKeyPress();
@@ -276,7 +296,7 @@ function typeNextCommand(i = 0)
           commandFinished = false;
           typeNextCommand();
         }
-        if(helpCommandNum > 13)
+        if(helperText.length === 0)
         {
           helpText.innerHTML = `<font style="font-size: 70%">those are the highlights! i'm giving you control now.
            here's an outline of my resume. feel free to click on any sections
