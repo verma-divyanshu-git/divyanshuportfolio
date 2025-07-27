@@ -36,7 +36,7 @@ A command line simulation.
 | ls [FILE]           | List directory contents.                                                 |
 | mkdir [DIRECTORIES] | Make directories.                                                        |
 | pwd                 | Print the name of the current working directory.                         |
-| projects            | Prints some of my favorite projects.                                     |
+| projects            | Prints some of my favorite projects. (dynamically fetches from github)   |
 | resume              | Prints resume to terminal.                                               |
 | tree [dir]          | Prints tree of directories recursively starting from given dir location. |
 | whois divyanshu     | Prints out my info.                                                      |
